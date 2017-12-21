@@ -4,23 +4,21 @@ use std::error::Error;
 
 fn main() {
     ::std::process::exit(match run_loop() {
-       Ok(_) => 0,
-       Err(err) => {
-           writeln!(io::stderr(), "error: {:?}", err).unwrap();
-           1
-       }
+        Ok(_) => 0,
+        Err(err) => {
+            writeln!(io::stderr(), "error: {:?}", err).unwrap();
+            1
+        }
     });
 }
 
 fn run_loop() -> Result<(), ()> {
-   let args = env::args().collect();
-   let mut status = false;
-   let mut line = 
+    let args = env::args().collect();
+    let mut status = false;
 
-   while status {
-       print!("> ");
-       line = 
-   }
+    while status {
+        print!("> ");
+    }
 
-   Ok(())
+    Ok(())
 }
